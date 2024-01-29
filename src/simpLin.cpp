@@ -9,7 +9,7 @@ This file contains the Rcpp functions for the simpLin Package.
 
 #include <RcppArmadillo.h>
 // [[Rcpp::depends(RcppArmadillo)]]
-#include <helpers.h>
+#include "helpers.h"
 
 using namespace Rcpp;
 using namespace arma;
