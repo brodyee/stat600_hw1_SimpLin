@@ -1,6 +1,6 @@
 ---
 title: "vignette"
-output: rmarkdown::html_vignette
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{vignette}
   %\VignetteEngine{knitr::rmarkdown}
@@ -26,8 +26,8 @@ intercept of the line of best fit. Also, their corresponding standard errors
 and 95% confidence intervals, residuals, and predicted values. All of these 
 are in a List.
 
-`SimpLinR(x, y)`
-- `x`: A numeric vector of the independent variable.
+`SimpLinR(x, y)`  
+- `x`: A numeric vector of the independent variable.  
 - `y`: A numeric vector of the dependent variable.
 
 ```{r}
@@ -37,14 +37,4 @@ b1 <- 3
 y <- b0 + b1 * x + rnorm(10)
 
 fit <- SimpLinR(x, y)
-
-fit$coefficients
-
-fit$se
-
-fit$ci
-
-fit$residuals
-
-fit$fitted.values
 ```
