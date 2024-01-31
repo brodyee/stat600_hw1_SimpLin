@@ -17,3 +17,34 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(SimpLin)
 ```
+
+### SimpLinR
+
+This is the only function in the package. It is a simple linear regression 
+function that takes in two vectors, x and y, and returns the slope and 
+intercept of the line of best fit. Also, their corresponding standard errors
+and 95% confidence intervals, residuals, and predicted values. All of these 
+are in a List.
+
+`SimpLinR(x, y)`
+- `x`: A numeric vector of the independent variable.
+- `y`: A numeric vector of the dependent variable.
+
+```{r}
+x <- rnorm(10)
+b0 <- 2
+b1 <- 3
+y <- b0 + b1 * x + rnorm(10)
+
+fit <- SimpLinR(x, y)
+
+fit$coefficients
+
+fit$se
+
+fit$ci
+
+fit$residuals
+
+fit$fitted.values
+```
